@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Crea tu cuenta de Pixel Store o inicia sesión para consultar tu perfil de jugador.">
+  <title>Pixel Store | Mi cuenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+  <div class="franja-info">PIXEL STORE <span>·</span> TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</div>
+
+  <header class="barra-superior">
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Pixel Store, inicio">
+        <img class="marca-icono" src="logo.jpg" alt="">
+        <span>PIXEL STORE</span>
+      </a>
+      <div class="controles-navegacion">
+        <a class="enlace-nav" href="index.html">Inicio</a>
+        <a class="enlace-nav" href="paginaweb.html">Catálogo</a>
+        <a class="enlace-carrito" href="paginaweb.html#carrito-seccion" aria-label="Ir a la bolsa">🛒 Mi bolsa</a>
+      </div>
+    </nav>
+    <nav class="menu-categorias" aria-label="Secciones de la tienda">
+      <div class="contenedor-menu">
+        <a href="paginaweb.html" class="cat-link">Todos los juegos</a>
+        <a href="paginaweb.html#titulo-catalogo" class="cat-link">Ofertas</a>
+        <a href="inicio.html" class="cat-link activo" aria-current="page">Mi cuenta</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <section class="encabezado-cuenta" aria-labelledby="titulo-pagina">
+      <p class="sobre-titulo">TU ESPACIO DE JUEGO</p>
+      <h1 id="titulo-pagina">Tu cuenta Pixel Store</h1>
+      <p>Regístrate para guardar tus datos y volver a consultarlos cuando inicies sesión.</p>
+    </section>
+
+    <div class="contenido-cuenta">
+      <section class="panel-acceso" aria-label="Registro e inicio de sesión">
+        <div class="pestanas" role="tablist" aria-label="Acceso a tu cuenta">
+          <button id="pestana-login" class="pestana activa" type="button" role="tab" aria-selected="true" aria-controls="formulario-login">Iniciar sesión</button>
+          <button id="pestana-registro" class="pestana" type="button" role="tab" aria-selected="false" aria-controls="formulario-registro">Crear cuenta</button>
+        </div>
+
+        <p id="mensaje-acceso" class="mensaje-acceso" role="status" aria-live="polite" hidden></p>
+
+        <form id="formulario-login" class="formulario-cuenta" aria-labelledby="pestana-login">
+          <h2>Qué bueno verte de nuevo</h2>
+          <p class="texto-formulario">Inicia sesión para ver los datos guardados de tu cuenta.</p>
+          <label for="login-correo">Correo electrónico</label>
+          <input id="login-correo" name="correo" type="email" autocomplete="username" required>
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+          <button class="boton-principal" type="submit">Iniciar sesión</button>
+          <p class="cambio-formulario">¿Aún no tienes cuenta? <button type="button" data-mostrar="registro">Regístrate aquí</button></p>
+        </form>
+
+        <form id="formulario-registro" class="formulario-cuenta" aria-labelledby="pestana-registro" hidden>
+          <h2>Únete a Pixel Store</h2>
+          <p class="texto-formulario">Completa tus datos para guardar tu perfil de jugador.</p>
+          <div class="campos-dobles">
+            <div class="campo">
+              <label for="registro-nombre">Nombre</label>
+              <input id="registro-nombre" name="nombre" type="text" autocomplete="given-name" minlength="2" maxlength="60" required>
+            </div>
+            <div class="campo">
+              <label for="registro-apellido">Apellido</label>
+              <input id="registro-apellido" name="apellido" type="text" autocomplete="family-name" minlength="2" maxlength="60" required>
+            </div>
+          </div>
+          <div class="campos-dobles">
+            <div class="campo">
+              <label for="registro-dni">DNI / Documento</label>
+              <input id="registro-dni" name="dni" type="text" autocomplete="off" minlength="5" maxlength="20" required>
+            </div>
+            <div class="campo">
+              <label for="registro-telefono">Teléfono</label>
+              <input id="registro-telefono" name="telefono" type="tel" autocomplete="tel" minlength="7" maxlength="20" required>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="registro-correo">Correo electrónico</label>
+            <input id="registro-correo" name="correo" type="email" autocomplete="email" maxlength="254" required>
+          </div>
+          <div class="campo">
+            <label for="registro-password">Contraseña <span class="ayuda-campo">(mínimo 8 caracteres)</span></label>
+            <input id="registro-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+          </div>
+          <div class="campos-dobles">
+            <div class="campo">
+              <label for="registro-pais">País / Región</label>
+              <select id="registro-pais" name="pais" autocomplete="country-name" required>
+                <option value="Perú">Perú</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+                <option value="México">México</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="registro-plataforma">Plataforma preferida</label>
+              <select id="registro-plataforma" name="plataforma" required>
+                <option value="PC / Steam">PC / Steam</option>
+                <option value="PlayStation 5">PlayStation 5</option>
+                <option value="Xbox Series X/S">Xbox Series X/S</option>
+                <option value="Nintendo Switch">Nintendo Switch</option>
+              </select>
+            </div>
+          </div>
+          <div class="campos-dobles">
+            <div class="campo">
+              <label for="registro-tipo">Tipo de cuenta</label>
+              <select id="registro-tipo" name="tipoCuenta" required>
+                <option value="Estándar">Estándar</option>
+                <option value="VIP / Gamer">VIP / Gamer</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="registro-suscripcion">Membresía</label>
+              <select id="registro-suscripcion" name="suscripcion" required>
+                <option value="Gratuita">Gratuita</option>
+                <option value="Pixel Gold">Pixel Gold</option>
+                <option value="Pixel Platinum">Pixel Platinum</option>
+              </select>
+            </div>
+          </div>
+          <button class="boton-principal" type="submit">Crear mi cuenta</button>
+          <p class="aviso-privacidad">Esta demostración guarda el perfil en este navegador; no es una cuenta en línea.</p>
+          <p class="cambio-formulario">¿Ya tienes una cuenta? <button type="button" data-mostrar="login">Inicia sesión</button></p>
+        </form>
+
+        <section id="perfil-guardado" class="perfil-guardado" aria-labelledby="titulo-perfil" hidden>
+          <div class="avatar-perfil" aria-hidden="true">PS</div>
+          <h2 id="titulo-perfil">Tu perfil de jugador</h2>
+          <p id="saludo-perfil" class="saludo-perfil"></p>
+          <dl id="datos-perfil" class="datos-perfil"></dl>
+          <button id="boton-cerrar-sesion" class="boton-secundario" type="button">Cerrar sesión</button>
+        </section>
+      </section>
+
+      <aside class="panel-informativo">
+        <div class="imagen-panel" role="img" aria-label="Arte de Cyberpunk 2077"></div>
+        <div class="texto-panel">
+          <p class="etiqueta-panel">TU CUENTA, TU PARTIDA</p>
+          <h2>Todo listo para tu próxima aventura</h2>
+          <p>Guarda tu plataforma favorita y tus datos de jugador para encontrarlos cuando vuelvas.</p>
+          <ul>
+            <li>Un perfil con tus preferencias</li>
+            <li>Acceso rápido a tus datos guardados</li>
+            <li>Más aventuras por descubrir</li>
+          </ul>
+          <a href="paginaweb.html" class="enlace-tienda">Explorar el catálogo →</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="seleccion-juegos" aria-labelledby="titulo-seleccion">
+      <div class="cabecera-seleccion">
+        <div>
+          <p class="sobre-titulo">DESCUBRE PIXEL STORE</p>
+          <h2 id="titulo-seleccion">Aventuras que te esperan</h2>
+        </div>
+        <a href="paginaweb.html#titulo-catalogo" class="enlace-tienda">Ver todos los juegos →</a>
+      </div>
+      <div class="galeria-juegos">
+        <a class="tarjeta-galeria" href="paginaweb.html#catalogo-juegos">
+          <img src="Cyberpunk%202077.jpg" alt="Portada de Cyberpunk 2077" loading="lazy">
+          <span>Cyberpunk 2077</span>
+        </a>
+        <a class="tarjeta-galeria" href="paginaweb.html#catalogo-juegos">
+          <img src="EldenRing.jpg" alt="Portada de Elden Ring" loading="lazy">
+          <span>Elden Ring</span>
+        </a>
+        <a class="tarjeta-galeria" href="paginaweb.html#catalogo-juegos">
+          <img src="GTAV.jpg" alt="Portada de Grand Theft Auto V" loading="lazy">
+          <span>Grand Theft Auto V</span>
+        </a>
+        <a class="tarjeta-galeria" href="paginaweb.html#catalogo-juegos">
+          <img src="RedDeadRedemption2.jpg" alt="Portada de Red Dead Redemption 2" loading="lazy">
+          <span>Red Dead Redemption 2</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <span>© 2026 Pixel Store · Hecho para quienes disfrutan jugar.</span>
+    <a href="index.html">Volver al inicio ↑</a>
+  </footer>
+  <script src="inicio.js" defer></script>
+</body>
+</html>

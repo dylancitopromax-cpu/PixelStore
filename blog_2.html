@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Dylan Oré | Portafolio Personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog_2.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#inicio">Saltar al contenido</a>
+  <header class="cabecera-sitio">
+    <nav class="barra-navegacion" aria-label="Navegación principal">
+      <a class="marca" href="#sobre-mi" data-seccion="sobre-mi" aria-label="Inicio, Dylan Oré">
+        <img class="marca-icono" src="yo.jpg" alt="">
+        <span>Dylan Oré</span>
+      </a>
+      <div class="nav-links">
+        <a href="#sobre-mi" data-seccion="sobre-mi">Sobre mí</a>
+        <a href="#proyectos" data-seccion="proyectos">Proyectos</a>
+        <a href="#metas" data-seccion="metas">Metas</a>
+        <a href="#cuenta" data-seccion="cuenta" aria-current="page">Iniciar sesión</a>
+        <a href="#favoritos" data-seccion="favoritos">Juegos</a>
+        <a href="#musica" data-seccion="musica">Música</a>
+        <a href="#fotos" data-seccion="fotos">Fotos</a>
+        <a href="#contacto" data-seccion="contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" id="inicio" tabindex="-1">
+    <h1 class="solo-lectores">Portafolio personal de Dylan Oré</h1>
+    <section class="hero" aria-labelledby="titulo-principal" hidden>
+      <div class="hero-contenido">
+        <p class="eyebrow">Estudiante de Software e IA</p>
+        <h2 id="titulo-principal">Hola, soy Dylan.</h2>
+        <p class="hero-descripcion">Estudio Ingeniería de Software e Inteligencia Artificial. En mi tiempo libre hago proyectos web, juego y escucho música.</p>
+        <div class="hero-acciones">
+          <a class="enlace-sutil" href="#favoritos" data-seccion="favoritos">Mis juegos</a>
+        </div>
+      </div>
+      
+      <aside class="tarjeta-intro" aria-label="Presentación breve">
+        <div class="tarjeta-imagen-wrapper">
+          <img class="avatar-img" src="yo.jpg" alt="Dylan Oré" draggable="false">
+        </div>
+        <h2>Dylan Oré</h2>
+        <p class="subtitulo-card">Estudiante de Ingeniería de Software e IA</p>
+      </aside>
+    </section>
+
+    <section class="seccion sobre-mi" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Sobre mí</p>
+        <h2 id="titulo-sobre-mi">Algunos datos sobre mí</h2>
+        <p>Un poco sobre mis gustos, estudios y personalidad.</p>
+      </div>
+      <div class="carrusel-sobre-mi" aria-label="Galería de imágenes sobre mí">
+        <div class="carrusel-pista">
+          <figure class="carrusel-imagen">
+            <img src="GTAV.jpg" alt="Imagen del videojuego Grand Theft Auto V">
+            <figcaption>Videojuegos que me gustan</figcaption>
+          </figure>
+          <figure class="carrusel-imagen">
+            <img src="Minecraft.jpg" alt="Imagen del videojuego Minecraft">
+            <figcaption>Construcciones y aventuras</figcaption>
+          </figure>
+          <figure class="carrusel-imagen">
+            <img src="gatito.jpg" alt="Un gato naranja">
+            <figcaption>Un amigo peludo</figcaption>
+          </figure>
+          <figure class="carrusel-imagen">
+            <img src="atardecer.jpg" alt="Paisaje de montañas al atardecer">
+            <figcaption>Un paisaje para relajarse</figcaption>
+          </figure>
+          <figure class="carrusel-imagen">
+            <img src="HogwartsLegacy.jpg" alt="Imagen del videojuego Hogwarts Legacy">
+            <figcaption>Un mundo de magia y aventuras</figcaption>
+          </figure>
+        </div>
+        <button class="flecha-carrusel anterior" type="button" aria-label="Mostrar imagen anterior">&#10094;</button>
+        <button class="flecha-carrusel siguiente" type="button" aria-label="Mostrar imagen siguiente">&#10095;</button>
+      </div>
+      <div class="grid-info">
+        <article class="info-card">
+          <div class="info-card-contenido">
+            <p class="categoria-card">EDAD</p>
+            <h3>18 años</h3>
+            <p>Nací el 9 de noviembre de 2007.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <div class="info-card-contenido">
+            <p class="categoria-card">ALTURA</p>
+            <h3>Dato pendiente</h3>
+            <p>Se me olvidó medirla; algún día lo averiguo jajaja.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <div class="info-card-contenido">
+            <p class="categoria-card">ESTUDIOS</p>
+            <h3>Software e IA</h3>
+            <p>Aprendiendo programación, lógica y cómo se construyen los sistemas.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <div class="info-card-contenido">
+            <p class="categoria-card">HOBBIES</p>
+            <h3>Juegos y música</h3>
+            <p>Me gustan los videojuegos y escuchar música, sobre todo Michael Jackson.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <div class="info-card-contenido">
+            <p class="categoria-card">PERSONALIDAD</p>
+            <h3>Con sentido del humor</h3>
+            <p>Me gusta bromear y disfrutar de las cosas sencillas.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <div class="info-card-contenido">
+            <p class="categoria-card">MI ESTILO</p>
+            <h3>Único, como todos</h3>
+            <p>Mi espejo y yo todavía estamos conversando sobre mi look jajaja.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="cuenta" aria-labelledby="titulo-cuenta" hidden>
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Mi cuenta</p>
+        <h2 id="titulo-cuenta">Regístrate o inicia sesión</h2>
+        <p>Crea una cuenta y luego entra con el mismo correo y contraseña.</p>
+      </div>
+
+      <div class="cuentas">
+        <form class="formulario-cuenta" id="formulario-registro-blog" novalidate>
+          <h3>Crear cuenta</h3>
+          <label for="registro-nombre">Nombre completo</label>
+          <input id="registro-nombre" name="nombre" type="text" autocomplete="name" minlength="3" required>
+          <span class="error-cuenta" id="error-registro-nombre"></span>
+
+          <label for="registro-correo">Correo electrónico</label>
+          <input id="registro-correo" name="correo" type="email" autocomplete="email" required>
+          <span class="error-cuenta" id="error-registro-correo"></span>
+
+          <label for="registro-password">Contraseña (mínimo 6 caracteres)</label>
+          <input id="registro-password" name="password" type="password" autocomplete="new-password" minlength="6" required>
+          <span class="error-cuenta" id="error-registro-password"></span>
+
+          <button type="submit">Registrarse</button>
+          <p class="mensaje-cuenta" id="mensaje-registro" aria-live="polite"></p>
+        </form>
+
+        <form class="formulario-cuenta" id="formulario-login-blog" novalidate>
+          <h3>Iniciar sesión</h3>
+          <label for="login-correo">Correo electrónico</label>
+          <input id="login-correo" name="correo" type="email" autocomplete="username" required>
+
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+
+          <button type="submit">Entrar</button>
+          <p class="mensaje-cuenta" id="mensaje-login" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="seccion" id="proyectos" aria-labelledby="titulo-proyectos" hidden>
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Proyectos</p>
+        <h2 id="titulo-proyectos">Cosas que quiero crear</h2>
+        <p>Ideas para practicar programación y aprender haciendo.</p>
+      </div>
+      <div class="grid-proyectos">
+        <details class="proyecto-card">
+          <summary><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Computadora portátil en un escritorio de trabajo" loading="lazy"><span class="tarjeta-texto"><strong>Mi primera página web</strong><p class="tarjeta-descripcion">Un sitio personal hecho con HTML y CSS para mostrar mis gustos y proyectos.</p><span class="etiquetas-tarjeta"><span>HTML</span><span>CSS</span></span></span></summary>
+        </details>
+        <details class="proyecto-card">
+          <summary><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80" alt="Teléfono móvil con una aplicación abierta" loading="lazy"><span class="tarjeta-texto"><strong>Una app para organizar tareas</strong><p class="tarjeta-descripcion">Una aplicación sencilla para anotar tareas y marcar las que ya terminé.</p><span class="etiquetas-tarjeta"><span>Aplicaciones</span><span>Productividad</span></span></span></summary>
+        </details>
+        <details class="proyecto-card">
+          <summary><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Circuito electrónico sobre una mesa" loading="lazy"><span class="tarjeta-texto"><strong>Probar ideas con tecnología</strong><p class="tarjeta-descripcion">Pequeños experimentos para aprender cómo funcionan la tecnología y la inteligencia artificial.</p><span class="etiquetas-tarjeta"><span>Tecnología</span><span>Inteligencia artificial</span></span></span></summary>
+        </details>
+        <details class="proyecto-card">
+          <summary><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Persona trabajando en una computadora" loading="lazy"><span class="tarjeta-texto"><strong>Un juego de preguntas</strong><p class="tarjeta-descripcion">Un juego web con preguntas de cultura general, puntaje y distintos niveles de dificultad.</p><span class="etiquetas-tarjeta"><span>JavaScript</span><span>Juegos</span></span></span></summary>
+        </details>
+        <details class="proyecto-card">
+          <summary><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80" alt="Consola de videojuegos retro" loading="lazy"><span class="tarjeta-texto"><strong>Una página de videojuegos</strong><p class="tarjeta-descripcion">Un catálogo para mostrar juegos favoritos, sus imágenes y una breve reseña de cada uno.</p><span class="etiquetas-tarjeta"><span>Videojuegos</span><span>Diseño web</span></span></span></summary>
+        </details>
+        <details class="proyecto-card">
+          <summary><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Equipo trabajando junto en una mesa" loading="lazy"><span class="tarjeta-texto"><strong>Trabajar en equipo</strong><p class="tarjeta-descripcion">Crear un proyecto con compañeros y aprender a repartir tareas y juntar nuestras ideas.</p><span class="etiquetas-tarjeta"><span>Colaboración</span><span>Aprendizaje</span></span></span></summary>
+        </details>
+      </div>
+    </section>
+
+    <section class="seccion" id="metas" aria-labelledby="titulo-metas" hidden>
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Mis metas</p>
+        <h2 id="titulo-metas">Lo que quiero lograr</h2>
+        <p>Algunos objetivos para seguir aprendiendo y creciendo.</p>
+      </div>
+      <div class="grid-metas">
+        <details class="meta-card">
+          <summary><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Persona trabajando en una computadora" loading="lazy"><span class="tarjeta-texto"><strong>Aprender más programación</strong><p class="tarjeta-descripcion">Practicar HTML, CSS y JavaScript creando páginas y proyectos propios.</p><span class="etiquetas-tarjeta"><span>Programación</span><span>Desarrollo web</span></span></span></summary>
+        </details>
+        <details class="meta-card">
+          <summary><img src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=900&q=80" alt="Cuaderno abierto para estudiar" loading="lazy"><span class="tarjeta-texto"><strong>Terminar mis estudios</strong><p class="tarjeta-descripcion">Seguir esforzándome en mis clases y avanzar paso a paso en mi carrera.</p><span class="etiquetas-tarjeta"><span>Estudios</span><span>Meta personal</span></span></span></summary>
+        </details>
+        <details class="meta-card">
+          <summary><img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80" alt="Agenda con notas y planificación" loading="lazy"><span class="tarjeta-texto"><strong>Crear proyectos útiles</strong><p class="tarjeta-descripcion">Hacer herramientas sencillas que puedan ayudarme a mí y a otras personas.</p><span class="etiquetas-tarjeta"><span>Proyectos</span><span>Creatividad</span></span></span></summary>
+        </details>
+        <details class="meta-card">
+          <summary><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Computadora usada para aprender" loading="lazy"><span class="tarjeta-texto"><strong>Aprender inteligencia artificial</strong><p class="tarjeta-descripcion">Conocer cómo se usa la inteligencia artificial y qué problemas puede ayudar a resolver.</p><span class="etiquetas-tarjeta"><span>Inteligencia artificial</span><span>Tecnología</span></span></span></summary>
+        </details>
+        <details class="meta-card">
+          <summary><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=80" alt="Persona planificando objetivos en una libreta" loading="lazy"><span class="tarjeta-texto"><strong>Organizar mejor mi tiempo</strong><p class="tarjeta-descripcion">Planear mis tareas y estudios para tener tiempo para mis proyectos y pasatiempos.</p><span class="etiquetas-tarjeta"><span>Organización</span><span>Hábitos</span></span></span></summary>
+        </details>
+        <details class="meta-card">
+          <summary><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80" alt="Personas colaborando en un proyecto" loading="lazy"><span class="tarjeta-texto"><strong>Mejorar trabajando en equipo</strong><p class="tarjeta-descripcion">Compartir ideas, escuchar a los demás y colaborar para terminar proyectos juntos.</p><span class="etiquetas-tarjeta"><span>Colaboración</span><span>Comunicación</span></span></span></summary>
+        </details>
+      </div>
+    </section>
+
+    <section class="seccion favoritos" id="favoritos" aria-labelledby="titulo-favoritos" hidden>
+      <div class="encabezado-seccion encabezado-en-linea">
+        <div>
+          <p class="eyebrow">Juegos</p>
+          <h2 id="titulo-favoritos">Algunos de mis favoritos</h2>
+        </div>
+      </div>
+      <div class="grid-juegos">
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Grand Theft Auto V">
+          <div class="juego-img-container">
+            <img src="GTAV.jpg" alt="Grand Theft Auto V" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Grand Theft Auto V</h3>
+            <p class="juego-razon">Explora Los Santos y vive misiones llenas de acción con tres personajes diferentes.</p>
+            <span class="etiquetas-tarjeta"><span>Mundo abierto</span><span>Acción</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de God of War Ragnarök">
+          <div class="juego-img-container">
+            <img src="GodofWarRagnarök.jpg" alt="God of War Ragnarök" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>God of War Ragnarök</h3>
+            <p class="juego-razon">Acompaña a Kratos y Atreus en un viaje por los reinos de la mitología nórdica.</p>
+            <span class="etiquetas-tarjeta"><span>Aventura</span><span>Mitología</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Hogwarts Legacy">
+          <div class="juego-img-container">
+            <img src="HogwartsLegacy.jpg" alt="Hogwarts Legacy" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Hogwarts Legacy</h3>
+            <p class="juego-razon">Descubre Hogwarts y aprende hechizos en una aventura mágica de mundo abierto.</p>
+            <span class="etiquetas-tarjeta"><span>Aventura</span><span>Fantasía</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Resident Evil 4">
+          <div class="juego-img-container">
+            <img src="ResidentEvil4.jpg" alt="Resident Evil 4" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Resident Evil 4</h3>
+            <p class="juego-razon">Resuelve misterios y sobrevive a peligros mientras Leon busca a la hija del presidente.</p>
+            <span class="etiquetas-tarjeta"><span>Supervivencia</span><span>Terror</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Cyberpunk 2077">
+          <div class="juego-img-container">
+            <img src="Cyberpunk%202077.jpg" alt="Cyberpunk 2077" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Cyberpunk 2077</h3>
+            <p class="juego-razon">Explora Night City y sigue la historia de V en un futuro lleno de tecnología.</p>
+            <span class="etiquetas-tarjeta"><span>Rol</span><span>Ciencia ficción</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Elden Ring">
+          <div class="juego-img-container">
+            <img src="EldenRing.jpg" alt="Elden Ring" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Elden Ring</h3>
+            <p class="juego-razon">Recorre las Tierras Intermedias, descubre secretos y enfréntate a grandes jefes.</p>
+            <span class="etiquetas-tarjeta"><span>Rol</span><span>Fantasía</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Minecraft">
+          <div class="juego-img-container">
+            <img src="Minecraft.jpg" alt="Minecraft" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Minecraft</h3>
+            <p class="juego-razon">Construye, explora y sobrevive en un mundo que puedes crear a tu manera.</p>
+            <span class="etiquetas-tarjeta"><span>Construcción</span><span>Creatividad</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Red Dead Redemption 2">
+          <div class="juego-img-container">
+            <img src="RedDeadRedemption2.jpg" alt="Red Dead Redemption 2" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Red Dead Redemption 2</h3>
+            <p class="juego-razon">Vive una historia del viejo oeste junto a Arthur Morgan y su banda.</p>
+            <span class="etiquetas-tarjeta"><span>Mundo abierto</span><span>Aventura</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de Call of Duty: Modern Warfare">
+          <div class="juego-img-container">
+            <img src="CallofDutyModernWarfare.jpg" alt="Call of Duty Modern Warfare" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>Call of Duty: Modern Warfare</h3>
+            <p class="juego-razon">Participa en misiones militares y partidas de acción en primera persona.</p>
+            <span class="etiquetas-tarjeta"><span>Acción</span><span>Disparos</span></span>
+          </div>
+        </article>
+
+        <article class="juego-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver imagen y descripción de The Last of Us Part I">
+          <div class="juego-img-container">
+            <img src="TheLastofUsPartI.jpg" alt="The Last of Us Part I" loading="lazy" decoding="async">
+          </div>
+          <div class="juego-body">
+            <h3>The Last of Us Part I</h3>
+            <p class="juego-razon">Acompaña a Joel y Ellie en un viaje de supervivencia por un mundo peligroso.</p>
+            <span class="etiquetas-tarjeta"><span>Supervivencia</span><span>Aventura</span></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion musica" id="musica" aria-labelledby="titulo-musica" hidden>
+      <div class="musica-info">
+        <p class="eyebrow">Música</p>
+        <h2 id="titulo-musica">Mis canciones favoritas</h2>
+        <p>Algunas canciones que me gustan. Pulsa un título para buscarlas en Spotify.</p>
+      </div>
+      <div class="lista-canciones">
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/200x200bb.jpg" alt="Portada del álbum Thriller">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Billie%20Jean%20Michael%20Jackson" target="_blank" rel="noopener noreferrer">Billie Jean</a></h3>
+            <p>Michael Jackson · Thriller</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/5f/28/d55f28f4-610c-ee81-dc16-a01cda46bbc4/886443546264.jpg/200x200bb.jpg" alt="Portada del álbum Bad">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Smooth%20Criminal%20Michael%20Jackson" target="_blank" rel="noopener noreferrer">Smooth Criminal</a></h3>
+            <p>Michael Jackson · Bad</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b0/28/a7/b028a7a4-9e6f-62fb-bce2-103a633449a9/602527717678.jpg/200x200bb.jpg" alt="Portada del álbum Jazz">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Bohemian%20Rhapsody%20Queen" target="_blank" rel="noopener noreferrer">Bohemian Rhapsody</a></h3>
+            <p>Queen · A Night at the Opera</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/08/23/fc/0823fcd9-cb44-695b-32bf-b3bf51d9f800/00606949351229.rgb.jpg/200x200bb.jpg" alt="Portada del álbum 8 Mile">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Lose%20Yourself%20Eminem" target="_blank" rel="noopener noreferrer">Lose Yourself</a></h3>
+            <p>Eminem · 8 Mile</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/53/a7/7f/53a77fab-c54c-a57b-8130-248fc12d0c80/093624948995.jpg/200x200bb.jpg" alt="Portada del álbum Hybrid Theory">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Numb%20Linkin%20Park" target="_blank" rel="noopener noreferrer">Numb</a></h3>
+            <p>Linkin Park · Meteora</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/200x200bb.jpg" alt="Portada del álbum Thriller">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Thriller%20Michael%20Jackson" target="_blank" rel="noopener noreferrer">Thriller</a></h3>
+            <p>Michael Jackson · Thriller</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/200x200bb.jpg" alt="Portada del álbum Thriller">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Beat%20It%20Michael%20Jackson" target="_blank" rel="noopener noreferrer">Beat It</a></h3>
+            <p>Michael Jackson · Thriller</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dd/86/92/dd86925d-484d-8ee7-3985-ef3264214269/602527644264.jpg/200x200bb.jpg" alt="Portada del álbum A Night at the Opera">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Don't%20Stop%20Me%20Now%20Queen" target="_blank" rel="noopener noreferrer">Don't Stop Me Now</a></h3>
+            <p>Queen · Jazz</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/dd/7d/72/dd7d7259-d27f-5b3e-ce64-9e304d2cb40f/dj.rxzrauer.jpg/200x200bb.jpg" alt="Portada del álbum Meteora">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/In%20the%20End%20Linkin%20Park" target="_blank" rel="noopener noreferrer">In the End</a></h3>
+            <p>Linkin Park · Hybrid Theory</p>
+          </div>
+        </article>
+        <article class="cancion">
+          <img class="imagen-cancion" src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/c8/ef/b9c8ef42-bbc9-64df-11f8-717571f6730f/886443673458.jpg/200x200bb.jpg" alt="Portada del álbum Highway to Hell">
+          <div class="cancion-detalles">
+            <h3><a href="https://open.spotify.com/search/Highway%20to%20Hell%20AC%2FDC" target="_blank" rel="noopener noreferrer">Highway to Hell</a></h3>
+            <p>AC/DC · Highway to Hell</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion fotos" id="fotos" aria-labelledby="titulo-fotos" hidden>
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Un poco de todo</p>
+        <h2 id="titulo-fotos">Paisajes y animales</h2>
+        <p>Paisajes, animales y algunas fotos de mi perro.</p>
+      </div>
+      <div class="galeria-fotos">
+        <figure class="foto-card">
+          <img src="images.jpe" alt="Paisaje de Machu Picchu entre montañas" loading="lazy">
+          <figcaption>Machu Picchu</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(1).jpe" alt="Puerta antigua junto al mar" loading="lazy">
+          <figcaption>Un paseo</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(2).jpe" alt="Catarata rodeada de vegetación" loading="lazy">
+          <figcaption>Catarata</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(3).jpe" alt="Embarcación tradicional en el agua" loading="lazy">
+          <figcaption>En el agua</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(4).jpe" alt="Torre inclinada bajo el cielo despejado" loading="lazy">
+          <figcaption>La torre</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(5).jpe" alt="Plaza frente a una iglesia" loading="lazy">
+          <figcaption>Plaza</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(6).jpe" alt="Casas junto a una laguna" loading="lazy">
+          <figcaption>Laguna</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(7).jpe" alt="Montañas de colores bajo el cielo" loading="lazy">
+          <figcaption>Montañas</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(8).jpe" alt="Barca en el agua al atardecer" loading="lazy">
+          <figcaption>Atardecer</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(9).jpe" alt="Playa junto a una costa rocosa" loading="lazy">
+          <figcaption>Playa</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(10).jpe" alt="Jirafa en un jardín" loading="lazy">
+          <figcaption>Jirafa</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(11).jpe" alt="Cebras en un campo" loading="lazy">
+          <figcaption>Cebras</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(12).jpe" alt="Elefantes en la sabana" loading="lazy">
+          <figcaption>Elefantes</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(13).jpe" alt="León en su entorno natural" loading="lazy">
+          <figcaption>León</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(14).jpe" alt="Perro blanco descansando" loading="lazy">
+          <figcaption>Un perro</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(15).jpe" alt="Serpiente entre hojas" loading="lazy">
+          <figcaption>Serpiente</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(16).jpe" alt="Caballo junto al agua" loading="lazy">
+          <figcaption>Caballo</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(17).jpe" alt="Refugio rodeado de árboles" loading="lazy">
+          <figcaption>Entre árboles</figcaption>
+        </figure>
+        <figure class="foto-card">
+          <img src="images%20(18).jpe" alt="Mi perro descansando en el jardín" loading="lazy">
+          <figcaption>Mi perro</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="seccion contacto" id="contacto" aria-labelledby="titulo-contacto" hidden>
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Contacto</p>
+        <h2 id="titulo-contacto">Hablemos</h2>
+        <p>Puedes encontrarme en estos medios.</p>
+      </div>
+      <div class="formulario-contacto">
+        <div class="campo-contacto">
+          <span class="icono-contacto" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7.2 3.5 10 7.1 8.4 9.3c1.1 2.2 2.9 4 5.1 5.1l2.2-1.6 3.6 2.8-.7 3.1c-.2.8-1 1.3-1.8 1.2C9.7 18.7 5.3 14.3 4.1 7.2c-.1-.8.4-1.6 1.2-1.8l1.9-.5Z"/></svg>
+          </span>
+          <div>
+            <h3>Teléfono</h3>
+            <p class="dato-contacto">+51 928 618 162</p>
+          </div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-tiktok" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14 3h3c.2 2.1 1.5 3.7 4 4v3.2a9.2 9.2 0 0 1-4-1.3v6.3a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a3 3 0 1 0 1.9 2.8V3Z"/></svg>
+          </span>
+          <div>
+            <h3>TikTok</h3>
+            <p class="dato-contacto">Alessandro</p>
+          </div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-facebook" aria-hidden="true">
+            <img src="images.png" alt="">
+          </span>
+          <div>
+            <h3>Facebook</h3>
+            <p class="dato-contacto">Alessandro</p>
+          </div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-discord" aria-hidden="true">
+            <img src="images%20(1).png" alt="">
+          </span>
+          <div>
+            <h3>Discord</h3>
+            <p class="dato-contacto">Alessandro:D</p>
+          </div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-instagram" aria-hidden="true">
+            <img src="images.jpg" alt="">
+          </span>
+          <div><h3>Instagram</h3><p class="dato-contacto">Alessandro</p></div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-x" aria-hidden="true">
+            <img src="X_icon.svg.webp" alt="">
+          </span>
+          <div><h3>X</h3><p class="dato-contacto">Alessandro</p></div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-youtube" aria-hidden="true">
+            <img src="images%20(2).png" alt="">
+          </span>
+          <div><h3>YouTube</h3><p class="dato-contacto">Alessandro</p></div>
+        </div>
+        <div class="campo-contacto">
+          <span class="icono-contacto icono-twitch" aria-hidden="true">
+            <img src="images%20(3).png" alt="">
+          </span>
+          <div><h3>Twitch</h3><p class="dato-contacto">Alessandro</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <dialog class="dialogo-detalle" id="dialogo-detalle" aria-labelledby="titulo-detalle">
+    <button class="cerrar-detalle" type="button" aria-label="Cerrar detalles" autofocus>&times;</button>
+    <img class="imagen-detalle" id="imagen-detalle" src="" alt="">
+    <div class="contenido-detalle">
+      <h2 id="titulo-detalle"></h2>
+      <p id="descripcion-detalle"></p>
+    </div>
+  </dialog>
+
+  <footer>
+    <a class="marca marca-footer" href="#sobre-mi" data-seccion="sobre-mi"><img class="marca-icono" src="yo.jpg" alt=""><span>Dylan Oré</span></a>
+    <p>© 2026 Dylan Oré</p>
+  </footer>
+  <dialog class="aviso-virus" id="aviso-virus" aria-labelledby="titulo-aviso">
+    <h2 id="titulo-aviso">¡Esta página tiene 1000 virus!</h2>
+    <p id="texto-aviso">Tranquilo, es una broma. No hay ningún virus muejejeje xddd</p>
+    <button class="boton-aviso" id="continuar-aviso" type="button">Continuar</button>
+  </dialog>
+  <script src="blog_2.js"></script>
+</body>
+</html>
