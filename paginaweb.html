@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Store | Tienda de videojuegos y coleccionables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="paginaweb.css">
+</head>
+<body>
+  <video class="video-fondo" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+  </video>
+  <div class="franja-info">JUEGOS, CONSOLAS Y ACCESORIOS <span>·</span> COMPRA FÁCIL Y SEGURA</div>
+  
+  <header class="barra-superior">
+    <div class="navegacion-principal">
+      <a class="marca" href="index.html" aria-label="Pixel Store, inicio">
+        <img class="marca-logo" src="logo.jpg" alt="">
+        <span>PIXEL STORE</span>
+      </a>
+      
+      <label class="barra-busqueda">
+        <span aria-hidden="true">⌕</span>
+        <input id="busqueda-juegos" type="search" placeholder="Busca un juego, plataforma o género..." aria-label="Buscar productos" autocomplete="off">
+      </label>
+
+      <div class="controles-navegacion">
+        <a class="enlace-carrito" href="#carrito-seccion">
+          Mi Bolsa (<span id="contador-carrito">0</span>)
+        </a>
+        <a class="enlace-registro" href="inicio.html">Mi Cuenta</a>
+      </div>
+    </div>
+
+    <nav class="menu-categorias" aria-label="Categorías de la tienda">
+      <div class="contenedor-menu">
+        <button class="cat-link activo" data-filtro="todos">Todos</button>
+        <button class="cat-link" data-filtro="ps5">PS5</button>
+        <button class="cat-link" data-filtro="switch">Nintendo Switch</button>
+        <button class="cat-link" data-filtro="xbox">Xbox</button>
+        <button class="cat-link" data-filtro="pc">PC</button>
+        <button class="cat-link" data-filtro="accion">Acción</button>
+        <button class="cat-link" data-filtro="rol">RPG</button>
+        <button class="cat-link" data-filtro="aventura">Aventura</button>
+        <button class="cat-link" data-filtro="deportes">Deportes</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="aviso-tienda">
+    <strong>¡Bienvenido a Pixel Store!</strong>
+    <span>Descubre ofertas y encuentra tu próximo juego favorito.</span>
+    <div class="acciones-aviso">
+      <a href="#conoce-creador">Conóceme</a>
+      <a href="#titulo-catalogo">Ver juegos</a>
+    </div>
+  </div>
+  <div class="barra-resultados">
+    <span id="cantidad-resultados" aria-live="polite">Mostrando 20 juegos</span>
+    <label>Ordenar por:
+      <select id="orden-juegos" aria-label="Ordenar juegos">
+        <option value="destacados">Destacados</option>
+        <option value="menor-precio">Precio: menor a mayor</option>
+        <option value="mayor-precio">Precio: mayor a menor</option>
+      </select>
+    </label>
+  </div>
+
+  <main class="contenedor">
+    <div class="marketplace">
+      <aside class="filtros-tienda" aria-label="Filtros de juegos">
+        <h2>Filtrar resultados</h2>
+        <fieldset>
+          <legend>Género</legend>
+          <label><input type="checkbox" value="accion" data-filtro="genero"> Acción</label>
+          <label><input type="checkbox" value="aventura" data-filtro="genero"> Aventura</label>
+          <label><input type="checkbox" value="rol" data-filtro="genero"> RPG</label>
+          <label><input type="checkbox" value="mundo-abierto" data-filtro="genero"> Mundo abierto</label>
+          <label><input type="checkbox" value="deportes" data-filtro="genero"> Deportes</label>
+        </fieldset>
+        <fieldset>
+          <legend>Plataforma</legend>
+          <label><input type="checkbox" value="pc" data-filtro="plataforma"> PC</label>
+          <label><input type="checkbox" value="ps5" data-filtro="plataforma"> PlayStation</label>
+          <label><input type="checkbox" value="xbox" data-filtro="plataforma"> Xbox</label>
+          <label><input type="checkbox" value="switch" data-filtro="plataforma"> Nintendo Switch</label>
+        </fieldset>
+      </aside>
+
+    <section class="seccion-catalogo" aria-labelledby="titulo-catalogo">
+      <div class="encabezado-catalogo">
+        <div>
+          <p class="sobre-titulo">PIXEL STORE · VIDEOJUEGOS</p>
+          <h1 id="titulo-catalogo">Juegos para tu próxima aventura</h1>
+          <p class="subtitulo-catalogo">Explora títulos populares, ofertas y novedades para todas tus plataformas.</p>
+        </div>
+        <a class="enlace-catalogo" href="#carrito-seccion">Ir a mi bolsa ↓</a>
+      </div>
+
+      <div class="juegos" id="catalogo-juegos" aria-live="polite">
+        <article class="tarjeta-juego" data-categoria="accion mundo-abierto rol ps5 pc xbox" data-busqueda="cyberpunk 2077 accion rol mundo abierto ps5 pc xbox">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="Cyberpunk%202077.jpg" alt="Cyberpunk 2077"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / PC / Xbox</span>
+            <h3 class="titulo-juego">Cyberpunk 2077</h3>
+            <p class="descripcion-juego">Acción y rol en un futuro distópico en Night City.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 120.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Cyberpunk 2077', 120)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="rol aventura ps5 xbox pc" data-busqueda="elden ring rol aventura fantasia ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="EldenRing.jpg" alt="Elden Ring"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox / PC</span>
+            <h3 class="titulo-juego">Elden Ring</h3>
+            <p class="descripcion-juego">Épica aventura fantástica de los creadores de Dark Souls.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 180.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Elden Ring', 180)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion mundo-abierto ps5 xbox pc" data-busqueda="gta v grand theft auto accion autos ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="GTAV.jpg" alt="GTA V"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox / PC</span>
+            <h3 class="titulo-juego">GTA V</h3>
+            <p class="descripcion-juego">Acción, historias cruzadas y crimen libre en Los Santos.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 60.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('GTA V', 60)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="aventura switch ps5 xbox pc" data-busqueda="minecraft construccion supervivencia switch ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="Minecraft.jpg" alt="Minecraft"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">Multiplataforma</span>
+            <h3 class="titulo-juego">Minecraft</h3>
+            <p class="descripcion-juego">Construye, explora y sobrevive en un universo infinito.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 95.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Minecraft', 95)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion aventura ps5 xbox pc" data-busqueda="red dead redemption 2 vaqueros oeste ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="RedDeadRedemption2.jpg" alt="Red Dead Redemption 2"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox / PC</span>
+            <h3 class="titulo-juego">Red Dead Redemption 2</h3>
+            <p class="descripcion-juego">La obra maestra del salvaje oeste de Rockstar Games.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 150.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Red Dead Redemption 2', 150)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion aventura ps5" data-busqueda="god of war ragnarok kratos ps5 accion">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="GodofWarRagnar%C3%B6k.jpg" alt="God of War Ragnarök"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PlayStation 5</span>
+            <h3 class="titulo-juego">God of War Ragnarök</h3>
+            <p class="descripcion-juego">Acompaña a Kratos y Atreus a través de los Nueve Reinos.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 190.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('God of War Ragnarök', 190)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="rol aventura ps5 switch xbox pc" data-busqueda="hogwarts legacy magia harry potter ps5 switch xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="HogwartsLegacy.jpg" alt="Hogwarts Legacy"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Switch / Xbox</span>
+            <h3 class="titulo-juego">Hogwarts Legacy</h3>
+            <p class="descripcion-juego">Vive tu propia aventura mágica en el mundo de Harry Potter.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 160.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Hogwarts Legacy', 160)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion aventura ps5 pc" data-busqueda="the last of us part i supervivencia ps5 pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="TheLastofUsPartI.jpg" alt="The Last of Us Part I"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / PC</span>
+            <h3 class="titulo-juego">The Last of Us Part I</h3>
+            <p class="descripcion-juego">Sobrevive en un mundo postapocalíptico junto a Joel y Ellie.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 170.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('The Last of Us Part I', 170)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion terror ps5 xbox pc" data-busqueda="resident evil 4 terror zombies leon ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="ResidentEvil4.jpg" alt="Resident Evil 4"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox / PC</span>
+            <h3 class="titulo-juego">Resident Evil 4 Remake</h3>
+            <p class="descripcion-juego">Clásico del terror reimaginado con gráficos de última generación.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 140.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Resident Evil 4 Remake', 140)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion ps5 xbox pc" data-busqueda="call of duty modern warfare shooter accion ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="CallofDutyModernWarfare.jpg" alt="Call of Duty"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox / PC</span>
+            <h3 class="titulo-juego">Call of Duty: MW III</h3>
+            <p class="descripcion-juego">Combates disparos en multijugador e historia intensa.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 210.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Call of Duty: MW III', 210)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="aventura switch rol" data-busqueda="zelda tears of the kingdom link switch aventura">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg" alt="Zelda Tears of the Kingdom"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">Nintendo Switch</span>
+            <h3 class="titulo-juego">Zelda: Tears of the Kingdom</h3>
+            <p class="descripcion-juego">Explora los cielos y tierras de Hyrule en la nueva aventura de Link.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 220.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Zelda: Tears of the Kingdom', 220)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="deportes ps5 xbox switch pc" data-busqueda="ea sports fc 24 fifa futbol deportes ps5 xbox switch pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/2195250/library_600x900.jpg" alt="EA Sports FC 24"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">Multiplataforma</span>
+            <h3 class="titulo-juego">EA SPORTS FC 24</h3>
+            <p class="descripcion-juego">El juego del rey de los deportes con licencias oficiales.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 199.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('EA SPORTS FC 24', 199)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion mundo-abierto ps5" data-busqueda="spiderman 2 marvel peter parker miles morales ps5">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/2651280/library_600x900.jpg" alt="Spider-Man 2"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PlayStation 5</span>
+            <h3 class="titulo-juego">Marvel's Spider-Man 2</h3>
+            <p class="descripcion-juego">Balancéate por Nueva York junto a Peter Parker y Miles Morales.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 240.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Marvel Spider-Man 2', 240)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="aventura switch" data-busqueda="super mario bros wonder plataformas nintendo switch">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://upload.wikimedia.org/wikipedia/en/a/a3/Mariowonder.png" alt="Super Mario Bros Wonder"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">Nintendo Switch</span>
+            <h3 class="titulo-juego">Super Mario Wonder</h3>
+            <p class="descripcion-juego">Diversión de plataformas clásica con sorprendentes Flores Maravilla.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 210.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Super Mario Wonder', 210)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="rol accion ps5 pc" data-busqueda="final fantasy xvi ff16 rpg ps5 pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/2515020/library_600x900.jpg" alt="Final Fantasy XVI"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / PC</span>
+            <h3 class="titulo-juego">Final Fantasy XVI</h3>
+            <p class="descripcion-juego">Una épica de fantasía oscura y combates en tiempo real.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 200.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Final Fantasy XVI', 200)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="rol mundo-abierto xbox pc" data-busqueda="starfield espacio bethesda xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/1716740/library_600x900.jpg" alt="Starfield"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">Xbox / PC</span>
+            <h3 class="titulo-juego">Starfield</h3>
+            <p class="descripcion-juego">Explora más de 1,000 planetas en este RPG espacial.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 230.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Starfield', 230)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion ps5 xbox switch pc" data-busqueda="mortal kombat 1 peleas fatality ps5 xbox switch pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/1971870/library_600x900.jpg" alt="Mortal Kombat 1"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">Multiplataforma</span>
+            <h3 class="titulo-juego">Mortal Kombat 1</h3>
+            <p class="descripcion-juego">Un universo reinventado con nuevos estilos de combate.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 195.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Mortal Kombat 1', 195)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="rol accion ps5 xbox pc" data-busqueda="diablo iv rpg mazmorras ps5 xbox pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/2344520/library_600x900.jpg" alt="Diablo IV"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox / PC</span>
+            <h3 class="titulo-juego">Diablo IV</h3>
+            <p class="descripcion-juego">Enfréntate a las hordas del inframundo en esta aventura gótica.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 210.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Diablo IV', 210)">Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion mundo-abierto ps5 xbox" data-busqueda="gta 6 vi grand theft auto vice city ps5 xbox preventa">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://upload.wikimedia.org/wikipedia/en/4/46/Grand_Theft_Auto_VI.png" alt="GTA VI"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / Xbox Series X</span>
+            <h3 class="titulo-juego">Grand Theft Auto VI</h3>
+            <p class="descripcion-juego">Reserva el lanzamiento más esperado del siglo en Vice City.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 280.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('GTA VI (Preventa)', 280)">Reservar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-juego" data-categoria="accion terror ps5 pc" data-busqueda="silent hill 2 remake terror misterio ps5 pc">
+          <div class="contenedor-imagen-tarjeta">
+            <button class="boton-imagen" type="button"><img class="imagen-juego" src="https://cdn.akamai.steamstatic.com/steam/apps/2124490/library_600x900.jpg" alt="Silent Hill 2"></button>
+          </div>
+          <div class="info-tarjeta">
+            <span class="plataforma">PS5 / PC</span>
+            <h3 class="titulo-juego">Silent Hill 2 Remake</h3>
+            <p class="descripcion-juego">El clásico de terror psicológico renace con gráficos impresionantes.</p>
+            <div class="pie-tarjeta">
+              <span class="precio">S/ 230.00</span>
+              <button class="boton-comprar" onclick="agregarJuego('Silent Hill 2 Remake', 230)">Comprar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p id="sin-resultados" role="status" hidden>No encontramos juegos con esos filtros. Prueba con otra búsqueda.</p>
+    </section>
+    </div>
+
+    <section id="carrito-seccion" aria-labelledby="titulo-carrito">
+      <h2 id="titulo-carrito">🛒 Tu Bolsa de Compras</h2>
+      <div class="carrito-contenido">
+        <div id="lista-carrito" aria-live="polite"><p class="carrito-vacio">Aún no has agregado juegos.</p></div>
+        <div class="resumen-carrito">
+          <div class="resumen-total">
+            <span>Total a pagar</span>
+            <h3>S/ <span id="total-precio">0.00</span></h3>
+          </div>
+          <div class="acciones-resumen">
+            <button class="boton-vaciar" type="button" onclick="vaciarCarrito()">Vaciar bolsa</button>
+            <button class="boton-finalizar" onclick="realizarCompra()">Finalizar compra</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="perfil-creador" id="conoce-creador" aria-labelledby="titulo-creador">
+      <img src="yo.jpg" alt="Dylan Oré">
+      <div class="texto-creador">
+        <p class="etiqueta-creador">DETRÁS DE PIXEL STORE</p>
+        <h2 id="titulo-creador">¡Hola! Soy Dylan</h2>
+        <p>Soy estudiante de Ingeniería de Software e Inteligencia Artificial. En mi blog comparto mis proyectos, mis gustos y un poco más sobre mí.</p>
+      </div>
+      <a class="boton-conocer" href="blog_2.html#sobre-mi">Conóceme en mi blog <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="pie-pagina-pro">
+    <div class="contenedor-pie">
+      <div class="columna-pie">
+        <h4>Seguir a Pixel Store</h4>
+        <p>Mantente al tanto de los nuevos lanzamientos, preventas exclusivas y ofertas semanales.</p>
+        <div class="redes-sociales">
+          <span class="enlace-red" aria-hidden="true">📘</span>
+          <span class="enlace-red" aria-hidden="true">📸</span>
+          <span class="enlace-red" aria-hidden="true">𝕏</span>
+          <span class="enlace-red" aria-hidden="true">🎮</span>
+          <span class="enlace-red" aria-hidden="true">💼</span>
+        </div>
+      </div>
+
+      <div class="columna-pie">
+        <h4>Institucional</h4>
+        <ul>
+          <li><span>Acerca de Pixel Store</span></li>
+          <li><span>Trabaja con nosotros</span></li>
+          <li><span>Vende tus juegos</span></li>
+          <li><span>Seguridad y confianza</span></li>
+        </ul>
+      </div>
+
+      <div class="columna-pie">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><span>Centro de Soporte</span></li>
+          <li><span>Términos de Uso</span></li>
+          <li><span>Política de Reembolso</span></li>
+          <li><span>Política de Privacidad</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-inferior">
+      <div class="selectores-region">
+        <span class="selector-btn">🌐 Español</span>
+        <span class="selector-btn">🇵🇪 Perú</span>
+      </div>
+      <p class="copyright">© 2026 Pixel Store · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <dialog class="modal-aniversario" id="modal-aniversario" aria-labelledby="titulo-aniversario">
+    <button class="cerrar-aniversario" type="button" onclick="cerrarAniversario()" aria-label="Cerrar aviso">×</button>
+    <img class="imagen-gatito-aniversario" src="gatito.jpg" alt="Gatito naranja celebrando el aniversario">
+    <p class="etiqueta-aniversario">ANIVERSARIO PIXEL STORE</p>
+    <h2 id="titulo-aniversario">¡Cumplimos 10 años!</h2>
+    <p>Para festejarlo, dejamos todos los juegos con <strong>10% de descuento</strong>. ¡Gracias por acompañarnos!</p>
+    <a class="boton-aniversario" href="#titulo-catalogo" onclick="cerrarAniversario()">Ver juegos</a>
+  </dialog>
+
+  <div class="modal-detalle-juego" id="modal-detalle-juego" aria-hidden="true">
+    <div class="modal-detalle-contenido" role="dialog" aria-modal="true" aria-labelledby="detalle-titulo">
+      <button class="cerrar-detalle" type="button" id="cerrar-detalle" aria-label="Cerrar detalle">×</button>
+      <img class="detalle-imagen" id="detalle-imagen" src="" alt="">
+      <div class="detalle-cuerpo">
+        <span class="detalle-plataforma" id="detalle-plataforma"></span>
+        <h2 id="detalle-titulo"></h2>
+        <p class="detalle-resumen" id="detalle-resumen"></p>
+        <ul class="detalle-lista" id="detalle-lista"></ul>
+        <div class="detalle-pie">
+          <span class="detalle-precio" id="detalle-precio"></span>
+          <button class="boton-detalle-comprar" id="boton-detalle-comprar" type="button">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="paginaweb.js"></script>
+</body>
+</html>
